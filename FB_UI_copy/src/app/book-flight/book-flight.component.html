@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-md-5 col-md-offset-4">
+    <div class="panel panel-primary">
+      <div class="panel-heading">Book the Flight</div>
+      <div class="panel-body">
+
+        <!-- Code the form here  -->
+
+        <div *ngIf="errorMessage!=null">
+          <span class="error">{{errorMessage}}</span>
+        </div>
+        <div *ngIf="successMessage!=null">
+          <span class="success">{{successMessage}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

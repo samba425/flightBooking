@@ -1,0 +1,40 @@
+<div class="row">
+  <div class="col-md-5 col-md-offset-4">
+    <div class="panel panel-primary">
+      <div class="panel-heading">View the Flight</div>
+      <div class="panel-body">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">Passenger Name</th>
+              <th scope="col">Booking Id</th>
+              <th scope="col">No of Tickets</th>
+              <th scope="col">Amount</th>
+              <th scope="col">Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of flightDetails">
+              <th scope="row">{{item.passengerName}}</th>
+              <td>{{item.bookingId}}</td>
+              <td>{{item.noOfTickets}}</td>
+              <td>{{item.totalAmount}}</td>
+              <td><button (click)='delete(item["bookingId"])' [disabled]='item.totalAmount < 500' 
+                class="btn btn-danger">Delete</button></td>
+            </tr>
+          </tbody>
+        </table>
+    <span class="m-1" *ngIf='loading'>loading...</span>
+
+        <div *ngIf="errorMessage!=null">
+          <span class="text-danger">{{errorMessage}}</span>
+        </div>
+        <div *ngIf="successMessage!=null">
+          <span class="text-success">{{successMessage}}</span>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>

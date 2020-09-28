@@ -1,0 +1,14 @@
+.allign{
+
+    text-align:center;
+    color:rgb(121, 16, 16)
+}
+
+
+.bg-image {
+     background-image: url('../assets/background.jpg');
+     background-size: cover;
+     height: 100vh;
+     margin: 0;
+     overflow: hidden;
+}
